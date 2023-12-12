@@ -11,9 +11,15 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 function sumArray(arr) {
-  // Your code here 
+  if(!arr.length) return 0;
+  let shifted = arr.shift();
+  return sumArray(arr) + shifted
 }
-  
+
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([0, 1, -3])); //  -2
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
